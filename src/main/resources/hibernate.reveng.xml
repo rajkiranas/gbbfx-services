@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="postgres" match-schema="test"/>
+  <table-filter match-name="physical_params"/>
+  <table-filter match-name="addictions"/>
+  <table-filter match-name="property"/>
+  <table-filter match-name="allergies"/>
+  <table-filter match-name="meal_type"/>
+  <table-filter match-name="friends"/>
+  <table-filter match-name="pi"/>
+  <table-filter match-name="idols"/>
+  <table-filter match-name="colours"/>
+  <table-filter match-name="hobbies"/>
+  <table-filter match-name="menses"/>
+  <table-filter match-name="social_service"/>
+  <table-filter match-name="address"/>
+  <table-filter match-name="vehicles"/>
+  <table-filter match-name="prakruti_nidaan"/>
+  <table-filter match-name="family_relations"/>
+  <table-filter match-name="influential_personalities"/>
+  <table-filter match-name="entertainment"/>
+  <table-filter match-name="tastes"/>
+  <table-filter match-name="schools"/>
+  <table-filter match-name="exercise"/>
+  <table-filter match-name="incidences"/>
+  <table-filter match-name="illness"/>
+  <table-filter match-name="life_style"/>
+  <table-filter match-name="prayers"/>
+  <table-filter match-name="academic_performance"/>
+  <table-filter match-name="travelling"/>
+</hibernate-reverse-engineering>

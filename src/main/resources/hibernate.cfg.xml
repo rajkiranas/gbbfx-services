@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://192.168.1.107:5432/postgres</property>
+    <property name="hibernate.default_schema">test</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">Sateri@123</property>
+    <property name="hibernate.connection.pool_size">7</property>
+    <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+    <property name="hibernate.c3p0.acquire_increment">2</property>
+    <property name="hibernate.c3p0.idle_test_period">600</property>
+    <property name="hibernate.c3p0.timeout">900</property>
+    <property name="hibernate.c3p0.max_size">150</property>
+    <property name="hibernate.c3p0.max_statements">100</property>
+    <property name="hibernate.c3p0.min_size">7</property>
+    <property name="connection.autoReconnect">true</property>
+    <property name="connection.autoReconnectForPools">true</property>
+    <!-- <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> 
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property> 
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cms</property> 
+    <property name="hibernate.connection.username">root</property> 
+    <property name="hibernate.connection.password">root</property> -->
+    <mapping class="com.srti.gbb.entity.AddictionsId"/>
+    <mapping class="com.srti.gbb.entity.PhysicalParams"/>
+    <mapping class="com.srti.gbb.entity.VehiclesId"/>
+    <mapping class="com.srti.gbb.entity.IncidencesId"/>
+    <mapping class="com.srti.gbb.entity.Incidences"/>
+    <mapping class="com.srti.gbb.entity.Tastes"/>
+    <mapping class="com.srti.gbb.entity.PrakrutiNidaan"/>
+    <mapping class="com.srti.gbb.entity.Hobbies"/>
+    <mapping class="com.srti.gbb.entity.AcademicPerformance"/>
+    <mapping class="com.srti.gbb.entity.PropertyId"/>
+    <mapping class="com.srti.gbb.entity.HobbiesId"/>
+    <mapping class="com.srti.gbb.entity.Pi"/>
+    <mapping class="com.srti.gbb.entity.Idols"/>
+    <mapping class="com.srti.gbb.entity.EntertainmentId"/>
+    <mapping class="com.srti.gbb.entity.Addictions"/>
+    <mapping class="com.srti.gbb.entity.Schools"/>
+    <mapping class="com.srti.gbb.entity.Prayers"/>
+    <mapping class="com.srti.gbb.entity.SchoolsId"/>
+    <mapping class="com.srti.gbb.entity.Vehicles"/>
+    <mapping class="com.srti.gbb.entity.IllnessId"/>
+    <mapping class="com.srti.gbb.entity.Menses"/>
+    <mapping class="com.srti.gbb.entity.Entertainment"/>
+    <mapping class="com.srti.gbb.entity.Illness"/>
+    <mapping class="com.srti.gbb.entity.IdolsId"/>
+    <mapping class="com.srti.gbb.entity.TastesId"/>
+    <mapping class="com.srti.gbb.entity.Address"/>
+    <mapping class="com.srti.gbb.entity.FamilyRelationsId"/>
+    <mapping class="com.srti.gbb.entity.MealType"/>
+    <mapping class="com.srti.gbb.entity.FriendsId"/>
+    <mapping class="com.srti.gbb.entity.Travelling"/>
+    <mapping class="com.srti.gbb.entity.ColoursId"/>
+    <mapping class="com.srti.gbb.entity.Friends"/>
+    <mapping class="com.srti.gbb.entity.Allergies"/>
+    <mapping class="com.srti.gbb.entity.FamilyRelations"/>
+    <mapping class="com.srti.gbb.entity.Property"/>
+    <mapping class="com.srti.gbb.entity.SocialService"/>
+    <mapping class="com.srti.gbb.entity.AllergiesId"/>
+    <mapping class="com.srti.gbb.entity.Colours"/>
+    <mapping class="com.srti.gbb.entity.InfluentialPersonalitiesId"/>
+    <mapping class="com.srti.gbb.entity.DictList"/>
+    <mapping class="com.srti.gbb.entity.Exercise"/>
+    <mapping class="com.srti.gbb.entity.LifeStyle"/>
+    <mapping class="com.srti.gbb.entity.InfluentialPersonalities"/>
+    <mapping class="com.srti.gbb.entity.PrakrutiNidaanId"/>
+  </session-factory>
+</hibernate-configuration>
