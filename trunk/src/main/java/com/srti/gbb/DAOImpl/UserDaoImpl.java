@@ -5,7 +5,7 @@
 package com.srti.gbb.DAOImpl;
 
 import com.srti.gbb.DAO.UserDao;
-import com.srti.gbb.entity.DictList;
+
 import com.srti.gbb.entity.Pi;
 
 
@@ -56,7 +56,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void saveNewWordDetails(Pi p) throws Exception {
-        hibernateTemplate.saveOrUpdate(p);
+        hibernateTemplate.save(p);
     }
 
 //    @Override
