@@ -118,7 +118,7 @@ public class UserService
         Type objType = new TypeToken<UserInfo>() {}.getType();
         String innerJson = (String) inputRequest.get(GlobalConstants.userInfoObject);
         UserInfo inputUser = new Gson().fromJson(innerJson, objType);
-        System.out.println("########UserInfo inputUser="+inputUser);
+        System.out.println("####********####UserInfo inputUser="+inputUser);
         
         p=new Pi();
         
@@ -188,6 +188,7 @@ public class UserService
 
     private void prepareIncidences(UserInfo inputUser, Pi p) {
         List<String> incList = inputUser.getIncidenceList();
+        
         if(incList!=null && !incList.isEmpty())
         {
             Set<Incidences> incidencesesSet = new HashSet<Incidences>(0);
@@ -209,7 +210,7 @@ public class UserService
         AddressBean input = inputUser.getAddress();
         if(input!=null)
         {
-            Address add = new Address(p);
+            Address add = new Address();
             
             add.setEmail(p.getEmail());
             
@@ -325,7 +326,7 @@ public class UserService
         PhysicalParameters input = inputUser.getPhysicalParams();
         if(input!=null)
         {
-            PhysicalParams phy = new PhysicalParams(p);
+            PhysicalParams phy = new PhysicalParams();
             
             phy.setEmail(p.getEmail());
             phy.setBp(new Double(input.getBp()));
@@ -336,7 +337,7 @@ public class UserService
             phy.setHeightInches(new Double(input.getInches()));
             phy.setHip(new Double(input.getHip()));
             phy.setLooseMoPerWeek(new Integer(input.getLooseMotionsPerWeek()).shortValue());
-            phy.setPi(p);
+            //phy.setPi(p);
             phy.setToeTouching(input.getToeTouching());
             phy.setToeTouchingCm(new Double(input.getToeTouchingCm()));
             phy.setWaist(new Double(input.getWaist()));

@@ -4,6 +4,7 @@ package com.srti.gbb.entity;
 
 import java.util.HashSet;
 import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -244,7 +245,7 @@ public class Pi  implements java.io.Serializable {
         this.income = income;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Incidences> getIncidenceses() {
         return this.incidenceses;
     }
@@ -253,7 +254,7 @@ public class Pi  implements java.io.Serializable {
         this.incidenceses = incidenceses;
     }
 
-@OneToOne(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Address getAddress() {
         return this.address;
     }
@@ -262,7 +263,7 @@ public class Pi  implements java.io.Serializable {
         this.address = address;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Illness> getIllnesses() {
         return this.illnesses;
     }
@@ -271,7 +272,7 @@ public class Pi  implements java.io.Serializable {
         this.illnesses = illnesses;
     }
 
-@OneToOne(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Menses getMenses() {
         return this.menses;
     }
@@ -280,7 +281,7 @@ public class Pi  implements java.io.Serializable {
         this.menses = menses;
     }
 
-@OneToOne(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public PhysicalParams getPhysicalParams() {
         return this.physicalParams;
     }
@@ -289,7 +290,7 @@ public class Pi  implements java.io.Serializable {
         this.physicalParams = physicalParams;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Tastes> getTasteses() {
         return this.tasteses;
     }
@@ -298,7 +299,7 @@ public class Pi  implements java.io.Serializable {
         this.tasteses = tasteses;
     }
 
-@OneToOne(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Travelling getTravelling() {
         return this.travelling;
     }
@@ -307,7 +308,7 @@ public class Pi  implements java.io.Serializable {
         this.travelling = travelling;
     }
 
-@OneToOne(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public MealType getMealType() {
         return this.mealType;
     }
@@ -316,7 +317,7 @@ public class Pi  implements java.io.Serializable {
         this.mealType = mealType;
     }
 
-@OneToOne(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public SocialService getSocialService() {
         return this.socialService;
     }
@@ -325,7 +326,7 @@ public class Pi  implements java.io.Serializable {
         this.socialService = socialService;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Addictions> getAddictionses() {
         return this.addictionses;
     }
@@ -334,7 +335,7 @@ public class Pi  implements java.io.Serializable {
         this.addictionses = addictionses;
     }
 
-@OneToOne(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Exercise getExercise() {
         return this.exercise;
     }
@@ -343,7 +344,7 @@ public class Pi  implements java.io.Serializable {
         this.exercise = exercise;
     }
 
-@OneToOne(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public AcademicPerformance getAcademicPerformance() {
         return this.academicPerformance;
     }
@@ -352,7 +353,7 @@ public class Pi  implements java.io.Serializable {
         this.academicPerformance = academicPerformance;
     }
 
-@OneToOne(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Prayers getPrayers() {
         return this.prayers;
     }
@@ -361,7 +362,7 @@ public class Pi  implements java.io.Serializable {
         this.prayers = prayers;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Colours> getColourses() {
         return this.colourses;
     }
@@ -370,7 +371,7 @@ public class Pi  implements java.io.Serializable {
         this.colourses = colourses;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Friends> getFriendses() {
         return this.friendses;
     }
@@ -379,7 +380,7 @@ public class Pi  implements java.io.Serializable {
         this.friendses = friendses;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<InfluentialPersonalities> getInfluentialPersonalitieses() {
         return this.influentialPersonalitieses;
     }
@@ -388,7 +389,7 @@ public class Pi  implements java.io.Serializable {
         this.influentialPersonalitieses = influentialPersonalitieses;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Idols> getIdolses() {
         return this.idolses;
     }
@@ -397,7 +398,7 @@ public class Pi  implements java.io.Serializable {
         this.idolses = idolses;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Schools> getSchoolses() {
         return this.schoolses;
     }
@@ -406,7 +407,7 @@ public class Pi  implements java.io.Serializable {
         this.schoolses = schoolses;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Allergies> getAllergieses() {
         return this.allergieses;
     }
@@ -415,7 +416,7 @@ public class Pi  implements java.io.Serializable {
         this.allergieses = allergieses;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Hobbies> getHobbieses() {
         return this.hobbieses;
     }
@@ -424,7 +425,7 @@ public class Pi  implements java.io.Serializable {
         this.hobbieses = hobbieses;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Entertainment> getEntertainments() {
         return this.entertainments;
     }
@@ -433,7 +434,7 @@ public class Pi  implements java.io.Serializable {
         this.entertainments = entertainments;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Property> getProperties() {
         return this.properties;
     }
@@ -442,7 +443,7 @@ public class Pi  implements java.io.Serializable {
         this.properties = properties;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<Vehicles> getVehicleses() {
         return this.vehicleses;
     }
@@ -451,7 +452,7 @@ public class Pi  implements java.io.Serializable {
         this.vehicleses = vehicleses;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<PrakrutiNidaan> getPrakrutiNidaans() {
         return this.prakrutiNidaans;
     }
@@ -469,7 +470,7 @@ public class Pi  implements java.io.Serializable {
         this.lifeStyle = lifeStyle;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public Set<FamilyRelations> getFamilyRelationses() {
         return this.familyRelationses;
     }
@@ -477,10 +478,6 @@ public class Pi  implements java.io.Serializable {
     public void setFamilyRelationses(Set<FamilyRelations> familyRelationses) {
         this.familyRelationses = familyRelationses;
     }
-
-
-
-
 }
 
 
