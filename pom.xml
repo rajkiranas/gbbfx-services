@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.quick.tim</groupId>
+    <groupId>com.srti.gbb</groupId>
     <artifactId>services</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -40,11 +40,11 @@
             <version>2.1</version>
             <scope>provided</scope>
         </dependency>
-<!--        <dependency>
+        <dependency>
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.1-901.jdbc4</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>c3p0</groupId>
             <artifactId>c3p0</artifactId>

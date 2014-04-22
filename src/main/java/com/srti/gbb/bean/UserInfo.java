@@ -493,5 +493,10 @@ public class UserInfo  implements Serializable
         this.personalityList = personalityList;
     }
 
+    @Override
+    public String toString() {
+        return "UserInfo{" + "pi=" + pi + ", address=" + address + ", physicalParams=" + physicalParams + ", meal=" + meal + ", exercise=" + exercise + ", life=" + life + ", gynecBean=" + gynecBean + ", addictionsList=" + addictionsList + ", educationList=" + educationList + ", avgPerformanceBean=" + avgPerformanceBean + ", familyEducationList=" + familyEducationList + ", friendsList=" + friendsList + ", prayers=" + prayers + ", socialService=" + socialService + ", traveling=" + traveling + ", hobbyList=" + hobbyList + ", entertainmentList=" + entertainmentList + ", vehicleList=" + vehicleList + ", propertyList=" + propertyList + ", prakrutiQuestionAnsList=" + prakrutiQuestionAnsList + ", selfIllnessList=" + selfIllnessList + ", parentsIllnessList=" + parentsIllnessList + ", grandParentsIllnessList=" + grandParentsIllnessList + ", siblingsIllnessList=" + siblingsIllnessList + ", idolList=" + idolList + ", colour=" + colour + ", taste=" + taste + ", allergyList=" + allergyList + ", dataSubmittedSuccessfully=" + dataSubmittedSuccessfully + ", healthReportPath=" + healthReportPath + ", spouse=" + spouse + ", childrenList=" + childrenList + ", incidenceList=" + incidenceList + ", personalityList=" + personalityList + '}';
+    }
+
     
 }

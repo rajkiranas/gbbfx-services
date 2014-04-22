@@ -4,7 +4,7 @@
  */
 package com.srti.gbb.DAO;
 
-import com.srti.gbb.entity.DictList;
+import com.srti.gbb.entity.Pi;
 
 
 
@@ -15,6 +15,6 @@ import com.srti.gbb.entity.DictList;
 public interface UserDao {
 //    public List<DictWordDetailsBean> getDictWordList(JSONObject inputRequest) throws JSONException;    
 //    public List<DictWordDetailsBean> searchWordList(JSONObject inputRequest) throws JSONException;    
-    public void saveNewWordDetails(DictList word) throws Exception;
+    public void saveNewWordDetails(Pi p) throws Exception;
 //    public List<DictWordDetailsBean> getWordOfTheDay(JSONObject inputRequest);
 }
