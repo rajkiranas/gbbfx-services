@@ -44,7 +44,9 @@ public class Menses  implements java.io.Serializable {
        this.hysterectomyAge = hysterectomyAge;
     }
    
-     @GenericGenerator(name="generator", strategy="foreign", parameters=@Parameter(name="property", value="pi"))@Id @GeneratedValue(generator="generator")
+     @GenericGenerator(name="generator", strategy="foreign", parameters=@Parameter(name="property", value="pi"))
+     @Id 
+     //@GeneratedValue(generator="generator")
 
     
     @Column(name="email", unique=true, nullable=false)
