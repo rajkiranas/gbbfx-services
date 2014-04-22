@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author kishorp
  */
 
-@Repository("dictDao")
+@Repository("userDao")
 @Transactional
 public class UserDaoImpl implements UserDao {
 

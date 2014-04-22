@@ -8,35 +8,18 @@
 	">
             
         
-	
-         
-         
-<!--        <property name="driverClassName" value="org.postgresql.Driver" />
-	<property name="url" value="jdbc:postgresql://192.168.1.28:5432/swarsfa" />
-	<property name="username" value="postgres" />
-	<property name="password" value="Sateri@123" />-->
-        
-        
-        <!--bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="org.postgresql.Driver" />
-	<property name="url" value="jdbc:postgresql://localhost:5432/postgresofc" />
-	<property name="username" value="postgres" />
-	<property name="password" value="root" />
-        </bean-->
-        
-  <!--    <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-	<property name="url" value="jdbc:mysql://localhost:3306/cms" />
-	<property name="username" value="root" />
-	<property name="password" value="root" />-->
-       
-                   
-	
-        
     <bean id="dataSource" class = "com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="org.postgresql.Driver" />
+        <property name="jdbcUrl" value="jdbc:postgresql://192.168.1.107:5432/postgres"/>
+        <property name="user" value="postgres" />
+        <property name="password" value="Sateri@123" />
+	
+        
+<!--    <bean id="dataSource" class = "com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test?zeroDateTimeBehavior=convertToNull"/>
         <property name="user" value="root" />
-        <property name="password" value="root" /> 
+        <property name="password" value="sateri" />-->
 
         <!-- these are C3P0 properties -->
         <property name="acquireIncrement" value="2" />
@@ -65,8 +48,8 @@
                 
 		<property name="hibernateProperties">
 			<props>
-			<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
-<!--	                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>-->
+<!--			<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>-->
+	                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
 				<!-- uncomment this for first time run-->
 				<!--<prop key="hibernate.hbm2ddl.auto">create</prop>-->
 				<prop key="hibernate.show_sql">true</prop>
