@@ -1078,10 +1078,12 @@ public class UserService
             
             
 
-            if(!fmSet.isEmpty())
+            
+        }
+        
+        if(!fmSet.isEmpty())
             {
                 p.setFamilyRelationses(fmSet);
             }
-        }
     }
 }
