@@ -48,7 +48,9 @@ public class Address  implements java.io.Serializable {
        this.pincode = pincode;
     }
    
-     @GenericGenerator(name="generator", strategy="foreign", parameters=@Parameter(name="property", value="pi"))@Id @GeneratedValue(generator="generator")
+     @GenericGenerator(name="generator", strategy="foreign", parameters=@Parameter(name="property", value="pi"))
+     @Id 
+     //@GeneratedValue(generator="generator")
 
     
     @Column(name="email", unique=true, nullable=false)

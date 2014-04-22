@@ -56,7 +56,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void saveNewWordDetails(Pi p) throws Exception {
-        hibernateTemplate.save(p);
+        hibernateTemplate.saveOrUpdate(p);
     }
 
 //    @Override

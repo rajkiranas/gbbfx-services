@@ -60,7 +60,9 @@ public class PhysicalParams  implements java.io.Serializable {
        this.constipationPerWeek = constipationPerWeek;
     }
    
-     @GenericGenerator(name="generator", strategy="foreign", parameters=@Parameter(name="property", value="pi"))@Id @GeneratedValue(generator="generator")
+     @GenericGenerator(name="generator", strategy="foreign", parameters=@Parameter(name="property", value="pi"))
+     @Id 
+     //@GeneratedValue(generator="generator")
 
     
     @Column(name="email", unique=true, nullable=false)
