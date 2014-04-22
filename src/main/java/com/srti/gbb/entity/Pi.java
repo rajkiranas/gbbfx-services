@@ -114,7 +114,7 @@ public class Pi  implements java.io.Serializable {
    
      @Id 
 
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    //@GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="email", unique=true, nullable=false)
     public String getEmail() {
         return this.email;
