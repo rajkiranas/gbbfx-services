@@ -461,7 +461,7 @@ public class Pi  implements java.io.Serializable {
         this.prakrutiNidaans = prakrutiNidaans;
     }
 
-@OneToOne(fetch=FetchType.LAZY, mappedBy="pi")
+@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="pi")
     public LifeStyle getLifeStyle() {
         return this.lifeStyle;
     }
