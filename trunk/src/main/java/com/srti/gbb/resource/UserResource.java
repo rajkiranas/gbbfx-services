@@ -26,27 +26,26 @@ import org.springframework.stereotype.Component;
 public class UserResource {
     
     private static final String saveUserDetails="saveUserDetails";
+    private static final String handshake="handshake";
     
     @Autowired
     private  UserService userService;
     
-    
     @GET
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Path(handshake)    
     @Produces(MediaType.APPLICATION_JSON)
     public JSONObject defaultM() throws JSONException 
     {
-        System.out.println("#####towards service *****");
+        System.out.println("#####towards service - handshake*****");
         JSONObject response = new JSONObject();
         try 
         {
-//            userService.saveUserDetails(inputRequest);
-            response.put(GlobalConstants.STATUS, "Successfully saved user info");
+            response.put(GlobalConstants.STATUS, "Handshake-Success");
             
         } catch (Exception e) 
         {
             e.printStackTrace();
-            response.put(GlobalConstants.STATUS, "Could not save user info");
+            response.put(GlobalConstants.STATUS, "Handshake-Failed");
         }
         
         return response;
