@@ -228,23 +228,23 @@ public class UserService
     private void prepareIllness(UserInfo inputUser, Pi p) {
         
         
-        Set<Illness> incidencesesSet = new HashSet<Illness>(0);
+        Set<Illness> illnessSet = new HashSet<Illness>(0);
         
-        prepareSelfIllness(inputUser, p, incidencesesSet);
+        prepareSelfIllness(inputUser, p, illnessSet);
         
-        prepareParentsIllness(inputUser, p, incidencesesSet);
+        prepareParentsIllness(inputUser, p, illnessSet);
         
-        prepareGrandParentsIllness(inputUser, p, incidencesesSet);
+        prepareGrandParentsIllness(inputUser, p, illnessSet);
         
-        prepareSiblingsIllness(inputUser, p, incidencesesSet);
+        prepareSiblingsIllness(inputUser, p, illnessSet);
         
-        if(!incidencesesSet.isEmpty())
+        if(!illnessSet.isEmpty())
         {
-            p.setIllnesses(incidencesesSet);
+            p.setIllnesses(illnessSet);
         }
     }
 
-    private void prepareSelfIllness(UserInfo inputUser, Pi p, Set<Illness> incidencesesSet) {
+    private void prepareSelfIllness(UserInfo inputUser, Pi p, Set<Illness> illnessSet) {
         List<IllnessBean> selfIllnessList = inputUser.getSelfIllnessList();
         if(selfIllnessList!=null && !selfIllnessList.isEmpty())
         {
@@ -255,12 +255,18 @@ public class UserService
             {
                 id = new IllnessId(p.getEmail(), GlobalConstants.SELF, illnessBean.getIllness());
                 pojo = new Illness(id, p,illnessBean.isIsHospitalized());
-                incidencesesSet.add(pojo);
+                pojo.setIntensity(illnessBean.getIntensity());
+                pojo.setFrequency(illnessBean.getFrequency());
+                pojo.setDuration(illnessBean.getDuration());
+                pojo.setLastsForDays(illnessBean.getLastsForDays());
+                pojo.setSinceYears(illnessBean.getSinceYears());
+                pojo.setLossOfManDays(illnessBean.getLossOfManDays());
+                illnessSet.add(pojo);
             }
         }
     }
 
-    private void prepareParentsIllness(UserInfo inputUser, Pi p, Set<Illness> incidencesesSet) {
+    private void prepareParentsIllness(UserInfo inputUser, Pi p, Set<Illness> illnessSet) {
         List<IllnessBean> parrentsIllnessList = inputUser.getParentsIllnessList();
         if(parrentsIllnessList!=null && !parrentsIllnessList.isEmpty())
         {
@@ -271,12 +277,12 @@ public class UserService
             {
                 id = new IllnessId(p.getEmail(), GlobalConstants.PARRENTS, illnessBean.getIllness());
                 pojo = new Illness(id, p,illnessBean.isIsHospitalized());
-                incidencesesSet.add(pojo);
+                illnessSet.add(pojo);
             }
         }
     }
 
-    private void prepareGrandParentsIllness(UserInfo inputUser, Pi p, Set<Illness> incidencesesSet) {
+    private void prepareGrandParentsIllness(UserInfo inputUser, Pi p, Set<Illness> illnessSet) {
         List<IllnessBean> grandParrentsIllnessList = inputUser.getGrandParentsIllnessList();
         if(grandParrentsIllnessList!=null && !grandParrentsIllnessList.isEmpty())
         {
@@ -287,12 +293,12 @@ public class UserService
             {
                 id = new IllnessId(p.getEmail(), GlobalConstants.GRAND_PARRENTS, illnessBean.getIllness());
                 pojo = new Illness(id, p,illnessBean.isIsHospitalized());
-                incidencesesSet.add(pojo);
+                illnessSet.add(pojo);
             }
         }
     }
 
-    private void prepareSiblingsIllness(UserInfo inputUser, Pi p, Set<Illness> incidencesesSet) {
+    private void prepareSiblingsIllness(UserInfo inputUser, Pi p, Set<Illness> illnessSet) {
         List<IllnessBean> siblingsIllnessList = inputUser.getSiblingsIllnessList();
         if(siblingsIllnessList!=null && !siblingsIllnessList.isEmpty())
         {
@@ -303,7 +309,7 @@ public class UserService
             {
                 id = new IllnessId(p.getEmail(), GlobalConstants.SIBLINGS, illnessBean.getIllness());
                 pojo = new Illness(id, p,illnessBean.isIsHospitalized());
-                incidencesesSet.add(pojo);
+                illnessSet.add(pojo);
             }
         }
     }
