@@ -24,6 +24,13 @@ public class Illness  implements java.io.Serializable {
      private IllnessId id;
      private Pi pi;
      private Boolean ishospitalized;
+     
+     private short intensity;
+     private short frequency;
+     private float duration;
+     private short lastsForDays;
+     private short sinceYears;
+     private short lossOfManDays;
 
     public Illness() {
     }
@@ -74,9 +81,59 @@ public class Illness  implements java.io.Serializable {
         this.ishospitalized = ishospitalized;
     }
 
+    @Column(name="illness_intensity")
+    public short getIntensity() {
+        return intensity;
+    }
 
+    public void setIntensity(short intensity) {
+        this.intensity = intensity;
+    }
 
+    @Column(name="illness_frequency")
+    public short getFrequency() {
+        return frequency;
+    }
 
+    public void setFrequency(short frequency) {
+        this.frequency = frequency;
+    }
+
+    @Column(name="illness_duration")
+    public float getDuration() {
+        return duration;
+    }
+
+    public void setDuration(float duration) {
+        this.duration = duration;
+    }
+
+    @Column(name="illness_lasts_for_days")
+    public short getLastsForDays() {
+        return lastsForDays;
+    }
+
+    public void setLastsForDays(short lastsForDays) {
+        this.lastsForDays = lastsForDays;
+    }
+
+    @Column(name="illness_since_years")
+    public short getSinceYears() {
+        return sinceYears;
+    }
+
+    public void setSinceYears(short sinceYears) {
+        this.sinceYears = sinceYears;
+    }
+
+    @Column(name="illness_loss_of_man_days")
+    public short getLossOfManDays() {
+        return lossOfManDays;
+    }
+
+    public void setLossOfManDays(short lossOfManDays) {
+        this.lossOfManDays = lossOfManDays;
+    }
 }
 
 
