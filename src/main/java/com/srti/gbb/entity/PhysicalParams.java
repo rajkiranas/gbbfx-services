@@ -30,7 +30,8 @@ public class PhysicalParams  implements java.io.Serializable {
      private Double weight;
      private Double hip;
      private Double waist;
-     private Double bp;
+     private Double bpSystolic;
+     private Double bpDiastolic;
      private Double haemoglobin;
      private String toeTouching;
      private Double toeTouchingCm;
@@ -52,7 +53,7 @@ public class PhysicalParams  implements java.io.Serializable {
        this.weight = weight;
        this.hip = hip;
        this.waist = waist;
-       this.bp = bp;
+       this.bpSystolic = bp;
        this.haemoglobin = haemoglobin;
        this.toeTouching = toeTouching;
        this.toeTouchingCm = toeTouchingCm;
@@ -144,13 +145,28 @@ public class PhysicalParams  implements java.io.Serializable {
     }
 
     
-    @Column(name="bp", precision=17, scale=17)
-    public Double getBp() {
-        return this.bp;
+    @Column(name="bp_systolic", precision=17, scale=17)
+    public Double getBpSystolic() {
+        return this.bpSystolic;
     }
     
-    public void setBp(Double bp) {
-        this.bp = bp;
+    public void setBpSystolic(Double bpSystolic) {
+        this.bpSystolic = bpSystolic;
+    }
+    
+    /**
+     * @return the bpDiastolic
+     */
+    @Column(name="bp_diastolic", precision=17, scale=17)
+    public Double getBpDiastolic() {
+        return bpDiastolic;
+    }
+
+    /**
+     * @param bpDiastolic the bpDiastolic to set
+     */
+    public void setBpDiastolic(Double bpDiastolic) {
+        this.bpDiastolic = bpDiastolic;
     }
 
     
@@ -202,10 +218,6 @@ public class PhysicalParams  implements java.io.Serializable {
     public void setConstipationPerWeek(Short constipationPerWeek) {
         this.constipationPerWeek = constipationPerWeek;
     }
-
-
-
-
 }
 
 

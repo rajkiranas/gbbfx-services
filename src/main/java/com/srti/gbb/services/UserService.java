@@ -42,7 +42,6 @@ import com.srti.gbb.entity.Allergies;
 import com.srti.gbb.entity.AllergiesId;
 import com.srti.gbb.entity.Colours;
 import com.srti.gbb.entity.ColoursId;
-import com.srti.gbb.entity.DictList;
 import com.srti.gbb.entity.Entertainment;
 import com.srti.gbb.entity.EntertainmentId;
 import com.srti.gbb.entity.Exercise;
@@ -79,7 +78,6 @@ import com.srti.gbb.entity.VehiclesId;
 import com.srti.gbb.global.GlobalConstants;
 import java.lang.reflect.Type;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -335,7 +333,8 @@ public class UserService
             PhysicalParams phy = new PhysicalParams();
             
             phy.setEmail(p.getEmail());
-            phy.setBp(new Double(input.getBp()));
+            phy.setBpSystolic(new Double(input.getBpSystolic()));
+            phy.setBpDiastolic(new Double(input.getBpDiastolic()));
             phy.setConstipationPerWeek(new Integer(input.getConstipationsPerWeek()).shortValue());
             phy.setHaemoglobin(new Double(input.getHaemoglobin()));
             //phy.setHeightCm(new Double(input.get));
