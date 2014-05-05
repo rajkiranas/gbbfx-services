@@ -6,6 +6,7 @@ package com.srti.gbb.services;
 
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.srti.gbb.DAO.UserDao;
 import com.srti.gbb.bean.AddictionBean;
@@ -77,6 +78,7 @@ import com.srti.gbb.entity.Vehicles;
 import com.srti.gbb.entity.VehiclesId;
 import com.srti.gbb.global.GlobalConstants;
 import java.lang.reflect.Type;
+import java.util.Date;
 
 import java.util.HashSet;
 import java.util.List;
@@ -115,7 +117,9 @@ public class UserService
     {
         Type objType = new TypeToken<UserInfo>() {}.getType();
         String innerJson = (String) inputRequest.get(GlobalConstants.userInfoObject);
-        UserInfo inputUser = new Gson().fromJson(innerJson, objType);
+        
+        Gson gson=  new GsonBuilder().setDateFormat(GlobalConstants.gsonTimeFormat).create();       
+        UserInfo inputUser = gson.fromJson(innerJson, objType);
         System.out.println("####********####UserInfo inputUser="+inputUser);
         
         p=new Pi();
@@ -176,6 +180,12 @@ public class UserService
         p.setReligion(input.getReligion());
         p.setMaritalStatus(input.getMaritalStatus());
         p.setNoOfChildren(new Integer(input.getNoOfChildren()).shortValue());
+        
+        Date d = new Date();
+        d.setTime(input.getBirthDate());
+        p.setBirthDate(d);
+        p.setBirthPlace(input.getBirthPlace());
+        
         p.setMobile(input.getMobile());
         p.setCompany(input.getOrganization());
         p.setIncome(input.getIncome());

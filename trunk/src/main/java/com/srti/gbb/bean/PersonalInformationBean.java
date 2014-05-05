@@ -27,6 +27,9 @@ public class PersonalInformationBean  implements Serializable
     private String occupation;
     private String income;
     private String qualification;
+    
+    private long birthDate;
+    private String birthPlace;
 
     public String getName() {
         return name;
@@ -163,7 +166,25 @@ public class PersonalInformationBean  implements Serializable
 
     @Override
     public String toString() {
-        return "PersonalInformationBean{" + "name=" + name + ", age=" + age + ", gender=" + gender + ", religion=" + religion + ", maritalStatus=" + maritalStatus + ", noOfChildren=" + noOfChildren + ", mobile=" + mobile + ", email=" + email + ", organization=" + organization + ", occupation=" + occupation + ", income=" + income + ", qualification=" + qualification + '}';
+        return "PersonalInformationBean{" + "name=" + name + ", age=" + age + ", gender=" + gender + ", religion=" + religion + ", maritalStatus=" + maritalStatus + ", noOfChildren=" + noOfChildren + ", mobile=" + mobile + ", email=" + email + ", organization=" + organization + ", occupation=" + occupation + ", income=" + income + ", qualification=" + qualification + ", birthDate=" + birthDate + ", birthPlace=" + birthPlace + '}';
+    }
+
+    
+
+    public long getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(long birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public String getBirthPlace() {
+        return birthPlace;
+    }
+
+    public void setBirthPlace(String birthPlace) {
+        this.birthPlace = birthPlace;
     }
     
     
